@@ -14,11 +14,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+@SuppressWarnings({ "unchecked", "serial", "rawtypes" })
 public class TraitsFactory {
   private static final Map<Type, SerializationTraits> PRIMITIVE_TYPES_MAPPING;
 
   static {
-    PRIMITIVE_TYPES_MAPPING = new HashMap<>() {
+    PRIMITIVE_TYPES_MAPPING = new HashMap() {
       {
         put(String.class, new StringTraits());
         put(Integer.class, new IntegerTraits());
